@@ -1,0 +1,91 @@
+
+
+
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<style>
+h1{
+color:red;
+
+}
+
+p{
+float:left;
+padding: 5px;
+}
+.result{
+
+color:red;
+}
+
+</style
+  <title></title>
+  
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+<div>
+<h1>
+Räkna Parmans lön 
+</h1>
+</div>
+
+<div class="hej">
+<input class=Grundlon placeholder=Grundlön type="digits" /> 
+<input  class=OB1 placeholder=OB1 type="digits" /> 
+<input class=OB2 placeholder=OB2 type="digits"/> 
+<input class=OB3 placeholder=OB3 type="digits"/> 
+
+<button class="btn">Räkna!</button>
+
+</div>
+<div>
+<p class="titel">Parmans lön ligger på:  </p>
+<p class= "result"> 0 </p>
+<p>kr</p>
+</div>
+<script>
+$(".btn").click(function(){
+if(($(".Grundlon" ).val())!=""){
+var grundlon=parseInt($(".Grundlon" ).val());
+}
+else{
+var grundlon=0;
+}
+if(($(".OB1" ).val())!=""){
+var ob1=parseInt($(".OB1" ).val());
+}
+else{
+var ob1=0;
+}
+
+if(($(".OB2" ).val())!=""){
+var ob2=parseInt($(".OB2" ).val());
+}
+else{
+var ob2=0;
+}
+if(($(".OB3" ).val())!=""){
+var ob3=parseInt($(".OB3" ).val());
+}
+else{
+var ob3=0;
+}
+var total=(grundlon*131.41)+(ob1*131.41*1.5)+(ob2*131.41*1.7)+(ob3*131.41*2);
+
+$(".result").text(String(total));
+
+
+});
+</script>
+
+</body>
+
+
+</html>
+
